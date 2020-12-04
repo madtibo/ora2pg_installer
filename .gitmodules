@@ -1,0 +1,3 @@
+[submodule "ora2pg"]
+	path = ora2pg
+	url = https://github.com/madtibo/ora2pg
