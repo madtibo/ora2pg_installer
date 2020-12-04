@@ -38,7 +38,6 @@ make
 make install
 
 cd ..
-unzip ora2pg-dlb_migration.zip
 cd ora2pg-dlb_migration
 perl Makefile.PL
 make
