@@ -1,17 +1,18 @@
 #!/bin/bash
 
-PGVERSION=${1:9.6}
+# HOW-TO
+# wget https://dali.bo/ora2pg_installer
+# unzip main.zip
+# cd ora2pg_installer-main/
+# ./ora2pg_install.sh [PGVERSION]
 
-wget https://dali.bo/ora2pg_installer
-tar xzf ora2pg_installer.tgz
-cd ora2pg_installer
+PGVERSION=${1:9.6}
 
 yum install -y epel-release
 yum install -y centos-release-scl
 yum install -y unzip time libaio rlwrap \
 		           perl perl-core perl-devel perl-DBI perl-Test-Simple \
                postgresql${PGVERSION/\./}-devel postgresql${PGVERSION/\./}-contrib
-
 yum groupinstall -y 'Development Tools'
 
 rpm -ivh oracle-instantclient12.2-basic-12.2.0.1.0-1.x86_64.rpm
